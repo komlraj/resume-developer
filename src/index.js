@@ -11,21 +11,21 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import Template2 from './components/templates/Template2';
+import Template1 from './components/templates/Template1';
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <div className='body'>
         <Navbar />
-        <div className='main'>
+        <div className='wrapper'>
           <Switch>
             <Route path='/' component={App} exact />
             <Route path='/templates' component={Templates} />
             <Route path='/preview' component={TemplatePreview} />
             <Route path='/create' component={CreateResume} />
             <Route path='/resume' component={Resume} />
-            <Route path='/temp' component={Template2} />
+            <Route path='/temp' component={Template1} />
           </Switch>
         </div>
       </div>
